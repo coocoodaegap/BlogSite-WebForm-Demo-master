@@ -1,0 +1,109 @@
+﻿.article-item {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.article-image {
+    flex: 0 0 120px; /* 固定宽度 */
+    margin-right: 15px;
+}
+
+    .article-image img {
+        max-width: 100%;
+        border-radius: 4px;
+    }
+
+.article-info {
+    flex: 1;
+}
+
+    .article-info h3 {
+        font-size: 1.2em;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    .article-info p {
+        font-size: 1em;
+        color: #666;
+        margin: 10px 0;
+    }
+
+    .article-info .summary {
+        color: #888;
+    }
+
+/* 分页样式 */
+.pagination {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.pagination-controls {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+    .pagination-controls asp:LinkButton {
+        margin: 0 5px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        .pagination-controls asp:LinkButton:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .article-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .article-image {
+        flex: 0 0 100px;
+        margin: 0 auto 15px;
+    }
+
+    .article-info h3 {
+        font-size: 1.1em;
+    }
+
+    .pagination-controls {
+        display: block;
+    }
+
+        .pagination-controls asp:LinkButton,
+        .pagination-controls asp:Button {
+            display: inline-block;
+            margin: 5px;
+            padding: 8px 12px;
+        }
+}
+
+@media (max-width: 480px) {
+    .article-info h3 {
+        font-size: 1em;
+    }
+
+    .pagination-controls asp:TextBox {
+        width: 40px;
+    }
+
+    .pagination-controls asp:Button {
+        padding: 5px 8px;
+    }
+}

@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs" Inherits="BlogSite.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link rel="stylesheet" type="text/css" href="/App_Themes/MainTheme/MainStyleSheet.css">
+    <link rel="stylesheet" type="text/css" href="/App_Themes/MainTheme/Button.css">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+    <style>
+        #form1 {
+            height: inherit;
+            width: inherit;
+            position: relative
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <div class="logo">
+                <h1 class="logo-text"><span>COO</span>Blog</h1>
+            </div>
+            <i class="fa fa-bars menu-toggle"></i>
+            <ul class="nav">
+                <li><a href="Index.aspx">主页</a></li>
+                <li><a href="Articles.aspx">文章</a></li>
+                <li id="loginButton" runat="server" visible="false"><a href="Login.aspx">登录</a></li>
+                
+                <li id="userMenu" runat="server" visible="false">
+                    <a href="#">
+                        <i class="fa fa-user"></i> <%= MVal %>
+                        <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+                    </a>
+                    <ul>
+                        <li><a href="dashboard.aspx">数据</a></li>
+                        <li><a href="Logout.aspx" class="logout">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+        <script>
+            $(document).ready(function () {
+                $('.menu-toggle').on('click', function () {
+                    $('.nav').toggleClass('showing');
+                    $('.nav ul').toggleClass('showing');
+                });
+            });
+        </script>
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h1 class="logo-text"><span>COO</span>Blog</h1>
+                    <p>Web 大作业</p>
+
+                    <div class="contact">
+                        <span><i class="fas fa-phone"></i>&nbsp;+86 133-xxxx-xxxx</span>
+                        <span><i class="fas fa-envelope"></i>&nbsp;info@googangheim.me</span>
+                    </div>
+                </div>
+
+                <div class="footer-section link">
+                    <h2>快捷链接</h2>
+                    <br>
+                    <ul>
+                        <a href="#">
+                            <li>画廊</li>
+                        </a>
+                        <a href="#">
+                            <li>条款和条件</li>
+                        </a>
+                        <a href="#">
+                            <li>事件</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact-form">
+                    <h2>联系我们</h2>
+                    <br />
+                    <asp:TextBox ID="EmailInput" runat="server" CssClass="text-input contact-input" Placeholder="输入你的邮箱"></asp:TextBox>
+                    <asp:TextBox ID="MessageInput" runat="server" CssClass="text-input contact-input" TextMode="MultiLine" Rows="4" Placeholder="输入你的消息......"></asp:TextBox>
+                    <asp:Button SkinID="ColoredBigBtn" ID="SendButton" runat="server" CssClass="contact-btn" Text="发送" />
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                Ruan ZH
+            </div>
+        </footer>
+    </form>
+    <script src="https://kit.fontawesome.com/e20fce8f9f.js" crossorigin="anonymous"></script>
+</body>
+</html>
+

@@ -1,0 +1,109 @@
+﻿.content {
+    width: 90%;
+    margin: 30px auto 30px;
+}
+
+    .content .main-content {
+        width: 70%;
+        float: left;
+    }
+
+        .content .main-content.single {
+            background: white;
+            padding: 20px 50px;
+            font-size: 1.1em;
+            border-radius: 5px;
+        }
+
+            .content .main-content.single .post-title {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+        .content .main-content .post {
+            position: relative;
+            width: 95%;
+            height: 270px;
+            margin: 20px auto;
+            border-radius: 5px;
+            background: white;
+        }
+
+    .content .popular .post {
+        border-top: 1px solid #e0e0e0;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+
+        .content .popular .post img {
+            height: 60px;
+            width: 75px;
+            float: left;
+            margin-right: 10px;
+        }
+
+    .content .main-content .post .read-more {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .content .main-content .post .post-image {
+        width: 40%;
+        height: 100%;
+        float: left;
+    }
+
+    .content .main-content .post .post-preview {
+        padding: 10px;
+        width: 60%;
+        float: right;
+    }
+
+    .content .main-content .recent-post-title {
+        margin: 20px;
+    }
+
+    .content .sidebar {
+        width: 30%;
+        float: right;
+        height: 300px;
+    }
+
+        .content .sidebar.single {
+            padding: 0px 10px;
+        }
+
+        .content .sidebar .section {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+            .content .sidebar .section .section-title {
+                margin: 10px 0px 10px 0px;
+            }
+
+            .content .sidebar .section.search {
+                margin-top: 80px;
+            }
+
+            .content .sidebar .section.topics ul {
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+            }
+
+                .content .sidebar .section.topics .genre {
+                    border-bottom: 1px solid #e0e0e0;
+                    display: block;
+                    padding: 15px 0px 15px 0px;
+                    transition: all 0.3s;
+                }
+
+                    .content .sidebar .section.topics .genre:hover {
+                        padding-left: 10px;
+                        color: #006669;
+                        transition: all 0.3s;
+                    }

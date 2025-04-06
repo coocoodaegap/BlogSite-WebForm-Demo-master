@@ -1,0 +1,29 @@
+﻿.btn {
+    padding: .5rem 1rem;
+    background: white;
+    color: black;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    font-size: 1.08em;
+    font-family: "Lora", serif;
+}
+
+    .btn:hover {
+        background: #FAFDFD;
+        cursor: pointer;
+    }
+
+.btn-big {
+    padding: .7rem 1.3rem;
+    line-height: 1.3rem;
+}
+
+.btn-colored {
+    background: #006669;
+    color: white;
+}
+
+    .btn-colored:hover {
+        color: white !important;
+        background: #005255;
+    }
